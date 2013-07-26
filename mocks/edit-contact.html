@@ -27,28 +27,40 @@
         <div id="contact-edit-form">
             <h1>Contact Edit</h1>
             <form>
-                <label for="avatar">Avatar:</label>
-                <input name="avatar" type="url"/>
+                <div class="form-group">
+                    <label for="avatar">Avatar:</label>
+                    <input name="avatar" type="url"/>
+                </div>
                 
-                <label for="first-name" required>First Name:</label>
-                <input name="first-name" type="text"/>
+                <div class="form-group">
+                    <label for="first-name" required>First Name:</label>
+                    <input name="first-name" type="text"/>
+                </div>
                 
-                <label for="last-name">Last Name:</label>
-                <input name="last-name" type="text"/>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input name="last-name" type="text"/>
+                </div>
                 
-                <label for="group">Group:</label>                    
-                <select name="group">
-                    <option></option>
-                    <option>Group One</option>
-                    <option>Group Two</option>
-                    <option>Group Three</option>
-                </select>
+                <div class="form-group">
+                    <label for="group">Group:</label>                    
+                    <select name="group">
+                        <option></option>
+                        <option>Group One</option>
+                        <option>Group Two</option>
+                        <option>Group Three</option>
+                    </select>
+                </div>
                     
-                <label for="phone">Phone:</label>
-                <input name="phone" type="text"/>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input name="phone" type="text"/>
+                </div>
 
-                <label for="email">E-mail:</label>
-                <input name="email" type="email"/>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input name="email" type="email"/>
+                </div>
                 
                 <input id="submit" type="submit"/>
             </form>
