@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Buckets</title>
+    <link rel="stylesheet" href="../css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="../css/blueprint/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="../css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, projection">
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="nav-head"> <> </span>
+            <a href="#contacts">
+                <span>Contacts</span>
+            </a>
+            <a href="#edit">
+                <span>Add Contact</span>
+            </a>
+            <span class="nav-book-end"></span>
+        </nav>
+    </header>
+    
+    <section id="view">
+        <div id="contact-edit-form">
+            <h1>Contact Edit</h1>
+            <form>
+                <label for="avatar">Avatar:</label>
+                <input name="avatar" type="url"/>
+                
+                <label for="first-name" required>First Name:</label>
+                <input name="first-name" type="text"/>
+                
+                <label for="last-name">Last Name:</label>
+                <input name="last-name" type="text"/>
+                
+                <label for="group">Group:</label>                    
+                <select name="group">
+                    <option></option>
+                    <option>Group One</option>
+                    <option>Group Two</option>
+                    <option>Group Three</option>
+                </select>
+                    
+                <label for="phone">Phone:</label>
+                <input name="phone" type="text"/>
+
+                <label for="email">E-mail:</label>
+                <input name="email" type="email"/>
+                
+                <input id="submit" type="submit"/>
+            </form>
+        </div>
+    </section>
+    
+    <footer>    
+    </footer>   
+<!--<div class="container">
+    <div>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input name="firstName"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input name="lastName"></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input name="phone"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input name="email"></td>
+            </tr>
+            <tr>
+                <td>Image URL:</td>
+                <td><input name="imageUrl"></td>
+            </tr>
+            <tr>
+                <td>Bucket:</td>
+                <td><input name="bucket"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>Save</button>
+                    <button>Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="image-url-preview">
+        Image Preview:
+        <img
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPLjVt-c0E1G2dMdDxfpboAxI81hncf_N_-02oD0BHUHYHewak"
+                width="80"
+                height="80">
+    </div>
+</div> -->
+</body>
+</html>
