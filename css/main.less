@@ -1,5 +1,6 @@
 /* Color */
 @backgroundTranslucentGray: rgba(255, 255, 255, .1);
+@backgroundTranslucentBlack: rgba(255, 255, 255, .5);
 
 .background-black-gradient {
     background: #7d7e7d;
@@ -155,6 +156,30 @@ body {
                     
                 }
             }
+        }
+    }
+    
+    #contact-card-dialog {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        
+        background-color: @backgroundTranslucentBlack;
+        
+        .card { 
+            position: absolute;
+            padding: 20px;
+            
+            top: 25%;
+            bottom: 25%;
+            right: 25%;
+            left: 25%;
+            
+            background-color: white;
+            
+            .box;
         }
     }
 
