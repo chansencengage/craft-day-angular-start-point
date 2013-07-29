@@ -1,0 +1,43 @@
+<section id="view">
+    <div id="contact-edit-form">
+        <h1>Contact Edit</h1>
+        <form>
+            <div class="form-group">
+                <label for="avatar">Avatar:</label>
+                <input name="avatar" type="url" data-ng-model="contact.avatarUrl"/>
+            </div>
+
+            <div class="form-group">
+                <label for="first-name" required>First Name:</label>
+                <input name="first-name" type="text" data-ng-model="contact.firstName"/>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input name="last-name" type="text" data-ng-model="contact.lastName"/>
+            </div>
+
+            <div class="form-group">
+                <label for="group">Group:</label>
+                <select name="group">
+                    <option></option>
+                    <option>Group One</option>
+                    <option>Group Two</option>
+                    <option>Group Three</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input name="phone" type="text" data-ng-model="contact.phone"/>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input name="email" type="email" data-ng-model="contact.email"/>
+            </div>
+
+            <input id="submit" type="submit"/>
+        </form>
+    </div>
+</section>

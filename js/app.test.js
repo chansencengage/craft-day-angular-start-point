@@ -3,10 +3,6 @@ describe('ContactBuckets', function() {
     describe('Module configuration', function() {
 
         var module, dependencies;
-        function hasModule(m) {
-            return dependencies.indexOf(m) >= 0;
-        }
-
         beforeEach(function() {
             module = angular.module('ContactBuckets');
             dependencies = module.value('appName').requires;
@@ -16,9 +12,14 @@ describe('ContactBuckets', function() {
             expect(module).toBeDefined();
         });
 
-        it('should have ContactDataModule as a dependency', function() {
+        it('should have ContractDataModule as a dependency', function() {
             expect(hasModule('ContactDataModule')).toEqual(true);
         });
+
+
+        function hasModule(m) {
+            return dependencies.indexOf(m) >= 0;
+        }
     });
 
     describe('ContactController', function() {
@@ -26,7 +27,7 @@ describe('ContactBuckets', function() {
         describe('Initializing the controller', function() {
 
             var contacts, _scope, _controller, contactDataService;
-            contacts = [{ name: 'Joe' }];
+            contacts = [{name: 'Chris'}, {name: 'Eric'}];
 
             beforeEach(function() {
                 angular.mock.module('ContactBuckets');
@@ -38,13 +39,34 @@ describe('ContactBuckets', function() {
 
                 spyOn(contactDataService, 'getAll').andReturn(contacts);
                 _controller('ContactController', {$scope: _scope, ContactDataService: contactDataService});
-            })
+
+            });
 
             it('retrieves contact data', function() {
                 expect(_scope.contacts).toBe(contacts);
-            })
+            });
 
+            it('assign delete function to scope', function() {
+                 expect(_scope.delete).toBe(contactDataService.delete);
+            });
+        });
+    });
 
-        })
+    describe('RouteProvider', function() {
+
+        var routes;
+        beforeEach(function() {
+            angular.mock.module('ContactBuckets');
+            inject(function($route) {
+                routes = $route.routes;
+            });
+        });
+
+        it('should contain /contacts route', function() {
+            var route = routes['/contacts'];
+            expect(route).toBeDefined();
+            expect(route.controller).toEqual('ContactController');
+            expect(route.templateUrl).toEqual('contacts.html');
+        });
     });
 });
